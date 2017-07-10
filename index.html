@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Attendance Recorder</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css" />
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row">
+					<span class="mdl-layout__title">Attendance Recorder
+						<span class="page-title-span"> | </span>
+						<span class="page-title-span"> Home </span>
+					</span>
+					<div class="mdl-layout-spacer"></div>
+					<nav class="mdl-navigation">
+						<button id ="loginBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+							Login with Google <i class="material-icons">account_circle</i>
+						</button>
+						<button id="logoutBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+							Logout
+						</button>
+					</nav>
+				</div>
+			</header>
+			<main class="mdl-layout__content">
+				<div id="mainContent" class="page-content">
+					<div id="welcome">			
+						<h2 id="welcomeText">Welcome to my page!</h2>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-messaging.js"></script>
+		<script>
+			var config = {
+			apiKey: "AIzaSyBHDohFEnjOOPbt-rZq2jxeEWkx93xD2R8",
+			authDomain: "attendance-34dc9.firebaseapp.com",
+			databaseURL: "https://attendance-34dc9.firebaseio.com",
+			projectId: "attendance-34dc9",
+			storageBucket: "attendance-34dc9.appspot.com",
+			messagingSenderId: "908490408403"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
