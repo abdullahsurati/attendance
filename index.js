@@ -1,14 +1,15 @@
+var user;
+var provider = new firebase.auth.GoogleAuthProvider();
 $(document).ready(function() {
 	$("#logoutBtn").hide();
 });
-var provider = new firebase.auth.GoogleAuthProvider();
-var user;
 $("#loginBtn").click(
 	function () {
 		console.log();
 		firebase.auth().signInWithPopup(provider).then(function(result) {
 		var token = result.credential.accessToken;
 		user = result.user;
+		console.log(user.displayName);
 		showWelcome();
 		}).catch(function(error) {
 			var errorCode = error.code;
