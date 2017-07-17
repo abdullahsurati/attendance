@@ -1,3 +1,6 @@
-#mainContent {
-	padding-left: 75px;
+#dates,#pp,#dbms,#cn,#ds,#am,#mp,#stats{
+	display: inline-table;
+}
+#viewAttendace,#updateAttendace{
+	display: inline-block;
 }
