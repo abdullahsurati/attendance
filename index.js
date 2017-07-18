@@ -47,13 +47,20 @@ function login(){
 	$("#handlesViewAttendance").hide();
 	$("#handlesUpdateAttendance").hide();
 };
+function viewAttendance(){
+	$("#handlesViewAttendance").show();
+	$("#handlesUpdateAttendance").hide();
+	$("#allTables").hide();
+	$("#descView").hide();
+	$("#overallPercentage").hide();
+};
 var enteredMMYYV;
 function selectDateV(){
 	var enteredMMV = document.getElementById("enteredMMV").value;
 	var enteredYYV = document.getElementById("enteredYYV").value;
 	enteredMMYYV = enteredMMV + "-" + enteredYYV;
 	clearInputsDates();
-	$("#descView").html("Here is your record of " + enteredMMYYU);
+	$("#descView").html("Here is your record of " + enteredMMYYV);
 	$("#allTables").show();
 	$("#ppDatesTableBody tr").remove();
 	$("#dbmsDatesTableBody tr").remove();
@@ -380,11 +387,6 @@ function selectDateV(){
 		var overallPercentage = ((ppPercentageTheory + ppPercentagePractical + dbmsPercentageTheory + dbmsPercentagePractical + cnPercentageTheory + cnPercentagePractical + dsPercentageTheory + dsPercentagePractical + amPercentage + mpPercentage)/n);
 		$("#overallPercentage").html("Your overall percentage is " + overallPercentage.toFixed(2));
 	});
-};
-function viewAttendance(){
-	$("#handlesViewAttendance").show();
-	$("#handlesUpdateAttendance").hide();
-	$("#allTables").hide();
 };
 function updateAttendance(){
 	$("#handlesViewAttendance").hide();
