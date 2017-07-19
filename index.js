@@ -61,6 +61,7 @@ function selectDateV(){
 	enteredMMYYV = enteredMMV + "-" + enteredYYV;
 	clearInputsDates();
 	$("#descView").html("Here is your record of " + enteredMMYYV);
+	$("#overallPercentage").show();
 	$("#allTables").show();
 	$("#ppDatesTableBody tr").remove();
 	$("#dbmsDatesTableBody tr").remove();
