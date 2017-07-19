@@ -60,6 +60,7 @@ function selectDateV(){
 	var enteredYYV = document.getElementById("enteredYYV").value;
 	enteredMMYYV = enteredMMV + "-" + enteredYYV;
 	clearInputsDates();
+	$("#descView").show();
 	$("#descView").html("Here is your record of " + enteredMMYYV);
 	$("#overallPercentage").show();
 	$("#allTables").show();
